@@ -41,7 +41,7 @@ export default function TodoList({
         </button>
       )}
       <li
-        className={`relative top-0 text-center line-clamp-3 p-1  border-none rounded-lg outline-none mb-3 w-4/5 ${boxStyle}`}
+        className={`text-center line-clamp-3 p-1  border-none rounded-lg outline-none mb-3 w-4/5 ${boxStyle}`}
         key={index}
       >
         {!editMode && (
@@ -56,15 +56,15 @@ export default function TodoList({
         {editMode && (
           <>
             <span className={`text-xl ${textStyle}`}>{todo}</span>
-            <div className="flex flex-row text-sm text-white ">
+            <div className="flex flex-row item-end justify-end text-sm  text-white">
               <button
                 onClick={() => onDelete(index)}
-                className="p-1  relative left-[90%] rounded-lg hover:bg-zinc-500  bg-zinc-400 "
+                className="p-1   rounded-lg hover:bg-zinc-500  bg-zinc-400 "
               >
                 Delete
               </button>
               <button
-                className=" ml-2 relative left-[90%] p-1 rounded-lg hover:bg-zinc-500  bg-zinc-400 "
+                className=" ml-2  p-1 rounded-lg hover:bg-zinc-500  bg-zinc-400 "
                 onClick={() => {
                   editTodos(index, editedText);
                   setEditMode(!editMode);

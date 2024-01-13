@@ -68,12 +68,12 @@ export default function AddTodos() {
   return (
     <div className="w-full">
       <button
-        className="relative left-3/4 top-0 bg-yellow-hf text-white text-3xl text-center w-10 h-10 rounded-full"
+        className="relative left-3/4 top-0 bg-yellow-hf text-white text-4xl text-center w-10 h-10 rounded-full "
         onClick={() => {
           setShowInput(!showInput);
         }}
       >
-        +
+        ＋
       </button>
       {showInput && (
         <div className=" flex flex-row items-center justify-center">
